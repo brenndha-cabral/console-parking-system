@@ -16,7 +16,7 @@ namespace console_parking_system.Models
             Regex regex = new Regex(@"^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$", RegexOptions.IgnoreCase);
             return regex.IsMatch(plate);
         }
-        
+
         public void RegisterCar()
         {
             Console.Write("Insira a placa do carro para cadastrar: ");
@@ -38,6 +38,25 @@ namespace console_parking_system.Models
             else
             {
                 Console.WriteLine("❌ Placa inválida ou nula!");
+            }
+
+        }
+        
+        public void ListCar()
+        {
+
+            if (carsOnParking.Count == 0)
+            {
+                Console.WriteLine("🚗 Nenhum carro estacionado.");
+            }
+            else
+            {
+                Console.WriteLine("🚗 Carros no estacionamento:");
+
+                foreach (KeyValuePair<string, DateTime> car in carsOnParking)
+                {
+                    Console.WriteLine($"Placa: {car.Key} | Entrada: {car.Value:dd/MM/yyyy HH:mm}");
+                }
             }
 
         }
