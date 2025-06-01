@@ -109,7 +109,7 @@ namespace console_parking_system.Models
             }
 
         }
-        
+
         public void RemoveCar()
         {
             Console.Write("Digite a placa para buscar e remover: ");
@@ -166,5 +166,9 @@ namespace console_parking_system.Models
             }
         }
 
+        public void ExitProgram()
+        {
+            Console.Write("Programa Finalizado!");
+        }
     }
 }
