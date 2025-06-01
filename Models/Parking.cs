@@ -41,7 +41,7 @@ namespace console_parking_system.Models
             }
 
         }
-        
+
         public void ListCar()
         {
 
@@ -57,6 +57,23 @@ namespace console_parking_system.Models
                 {
                     Console.WriteLine($"Placa: {car.Key} | Entrada: {car.Value:dd/MM/yyyy HH:mm}");
                 }
+            }
+
+        }
+        
+        public void FindCar()
+        {
+            Console.Write("Digite a placa para buscar: ");
+            string? inputPlate = Console.ReadLine()?.ToUpper();
+
+            if (!string.IsNullOrWhiteSpace(inputPlate) && IsValidPlate(inputPlate) && carsOnParking.ContainsKey(inputPlate))
+            {
+                DateTime registerTime = carsOnParking[inputPlate];
+                Console.WriteLine($"✅ Carro encontrado! Placa: {inputPlate} | Entrada: {registerTime:dd/MM/yyyy HH:mm}");
+            }
+            else
+            {
+                Console.WriteLine("❌ Placa não encontrada.");
             }
 
         }
