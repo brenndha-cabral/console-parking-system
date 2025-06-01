@@ -118,12 +118,12 @@ namespace console_parking_system.Models
             if (!string.IsNullOrWhiteSpace(car) && IsValidPlate(car) && carsOnParking.ContainsKey(car))
             {
                 DateTime registerTime = carsOnParking[car];
-                DateTime departureTime = DateTime.Now;
-                TimeSpan parkedTime = registerTime - departureTime;
+                TimeSpan parkedTime = DateTime.Now - registerTime;
                 double betweenOfHours = parkedTime.TotalHours;
+                string formattedTime = parkedTime.ToString(@"hh\:mm\:ss");
                 string payValue = CalculateValueOfTime(betweenOfHours).ToString("C", CultureInfo.GetCultureInfo("pt-BR"));
 
-                Console.WriteLine($"⏳ Tempo: {betweenOfHours} - 💰 Total a pagar: {payValue}");
+                Console.WriteLine($"⏳ Tempo: {formattedTime} - 💰 Total a pagar: {payValue}");
                 Console.WriteLine("Qual a forma de pagamento?");
 
                 foreach (KeyValuePair<int, string> payment in paymentMethods)

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("console-parking-system")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40d8ae93d73c47e1cbde83d4c8c07397c62c6c36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e911a8a453cc79b5755100c894befc571069774")]
 [assembly: System.Reflection.AssemblyProductAttribute("console-parking-system")]
 [assembly: System.Reflection.AssemblyTitleAttribute("console-parking-system")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
