@@ -1,6 +1,9 @@
 # 🚗 Console Parking System
 
 Sistema de gerenciamento de estacionamento desenvolvido em console, que permite controlar a entrada, saída, listagem e cobrança de veículos de forma simples e prática.
+<p align="center">
+  <img src="Images/Fluxograma.png" alt="Tela do sistema de estacionamento" width="500"/>
+</p>
 
 ---
 
